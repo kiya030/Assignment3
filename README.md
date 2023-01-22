@@ -1,6 +1,6 @@
 # assignment-03
 
-You will be working in groups of up to 3 students for this project.
+You will be working in groups of up to 2 students for this project.
 
 The goal is to develop a "Software as a Service" web application performing CRUD operations based on React, NodeJs and Prisma (Some examples include an online store, food ordering, personal journal, learning management system, social network, ...).
 
