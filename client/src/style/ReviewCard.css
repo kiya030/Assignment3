@@ -1,0 +1,115 @@
+.review-card {
+    background: rgb(222, 220, 222);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    max-width: 400px;
+    margin: 1rem;
+    text-align: left; /* Align text to the left */
+    cursor: pointer; /* Indicates that the card is clickable */
+  }
+  
+  .detail-review-card {
+    background: #343a40;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    max-width: 400px;
+    margin: 1rem;
+    text-align: left; /* Align text to the left */
+  }
+
+  .review-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .review-product-name {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #736e6e;
+  }
+  
+  .review-rating {
+    display: flex;
+    color: #ffc107; /* Gold color for stars */
+  }
+  
+  .star {
+    cursor: default;
+  }
+  
+  .filled {
+    color: #ffc107; /* Gold color for filled stars */
+  }
+  
+  .empty {
+    color: #e4e5e9; /* Light grey color for empty stars */
+  }
+  
+  .review-text {
+    color: #666;
+    margin: 0.5rem 0;
+  }
+  
+  .review-date {
+    font-size: 0.9rem;
+    color: #999;
+  }
+  
+
+  /* Responsive Design */
+@media (max-width: 768px) {
+  .review-card, .detail-review-card {
+    padding: 1rem; /* Less padding on smaller screens */
+    max-width: 95%; /* Allow the card to be more fluid on small screens */
+    margin: 0.5rem; /* Smaller margin on small screens */
+  }
+  
+  .review-product-name {
+    font-size: 1rem; /* Smaller font size on smaller screens */
+  }
+
+  .review-rating .star {
+    font-size: 1.2rem; /* Adjust star size as needed */
+  }
+
+  .review-text {
+    font-size: 0.9rem; /* Smaller font size on smaller screens */
+  }
+  
+  .review-date {
+    font-size: 0.8rem; /* Smaller font size for the review date on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .review-card, .detail-review-card {
+    padding: 0.5rem; /* Even less padding for very small screens */
+    max-width: 100%; /* Full width on very small screens */
+    margin: 0.5rem 0; /* Adjust margin as necessary */
+  }
+  
+  .review-product-name, .review-text {
+    font-size: 0.9rem; /* Even smaller font size for very small screens */
+  }
+
+
+}
+
+/* Adjust the star size for different orientations or specific needs */
+@media (max-width: 768px) and (orientation: portrait) {
+  .review-rating .star {
+    font-size: 1.2rem; /* Example adjustment for portrait orientation */
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .review-rating .star {
+    font-size: 1rem; /* Example adjustment for landscape orientation */
+  }
+}

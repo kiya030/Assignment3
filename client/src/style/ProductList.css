@@ -1,0 +1,122 @@
+.success-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(186, 144, 186);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .success-modal {
+    top: 20%; /* Position the modal slightly higher on small screens */
+    padding: 8px 15px; /* Slightly less padding on smaller screens */
+    width: auto; /* Adjust the width as necessary */
+    max-width: 90%; /* Ensure the modal doesn't exceed the width of the screen */
+    transform: translate(-50%, -20%); /* Adjust translate to match the new top value */
+  }
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Spacing between cards */
+    padding: 20px;
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: rgb(222, 220, 222);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes space between title, description, price, and button */
+  }
+  
+  .product-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #333;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .product-price {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center; /* Adjust this as needed */
+    gap: 10px; /* Space between buttons */
+    flex-wrap: wrap; /* Allows button to wrap to next line on small screens */
+  }
+
+.product-btn {
+    box-sizing: border-box; /* Ensures padding and border are included within the element's dimensions */
+    padding: 8px 16px; /* Provides internal spacing */
+    border: 1px solid transparent; /* Adjust border styling as necessary */
+    font-size: 10px; /* Set the font size as needed */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    overflow: hidden; /* Prevents text from spilling out */
+    text-overflow: ellipsis; /* Adds an ellipsis if the text is too long */
+    background-color: #5785b7;
+    color: white;
+    border-radius: 5px;
+  }
+
+/* Set explicit widths for the buttons or make them wrap content. */
+.view-product-btn, .list-add-to-cart-btn {
+  flex: none; /* Prevents the buttons from growing or shrinking */
+  width: auto; /* Allows the button to fit its content */
+}
+
+  
+.product-btn:hover {
+  background-color: #546d87;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .products-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust the minimum size for smaller screens */
+    gap: 15px; /* Smaller gap on small screens */
+  }
+  
+  .product-card {
+    padding: 10px; /* Slightly less padding on smaller screens */
+  }
+  
+  .product-title, .product-price {
+    font-size: 1rem; /* Smaller font size on small screens */
+  }
+
+  .button-container {
+    justify-content: space-around; /* Ensure buttons spread out nicely */
+  }
+
+  .product-btn {
+    padding: 6px 12px; /* Slightly smaller padding on smaller screens */
+    font-size: 0.9rem; /* Smaller font size for the text on buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .products-container {
+    grid-template-columns: 1fr; /* Full width columns for very small screens */
+  }
+  
+  
+  .product-title, .product-price, .product-btn {
+    font-size: 0.8rem; /* Even smaller font sizes for very small screens */
+  }
+}

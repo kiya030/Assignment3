@@ -1,0 +1,138 @@
+/* New style for the field container */
+.profile-field {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    gap: 10px;
+  }
+  
+  /* Style adjustments for the profile details */
+  .profile-details span, .profile-details input {
+    /* Changing from block to inline-block, so they don't take full width */
+    display: inline-block;
+    margin: 10px 0;
+    margin-right: auto; /* Pushes the edit button to the right */
+    color: inherit;
+  }
+  
+
+  
+/* Style the save changes button specifically */
+.profile-details .profile-save-changes-button {
+    display: block; /* Make the button a block element to allow for margin auto */
+    width: fit-content; /* Let the button size according to its content */
+    margin: 10px auto; /* Center the button horizontally */
+    padding: 8px 15px;
+}
+  
+
+/* General styles for the profile container */
+.profile-container {
+    color: #f8f8f8; /* Light text color */
+    background-color: #333; /* Dark background color */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px; /* Adjust the width as necessary */
+  }
+  
+  /* Styles for the headings inside the profile container */
+  .profile-container h2 {
+    color: #f8f8f8;
+    border-bottom: 2px solid #555; /* Subtle bottom border */
+    padding-bottom: 10px;
+  }
+  
+  /* Styles for the profile details */
+  .profile-details {
+    background-color: #424242; /* Slightly lighter than the container for contrast */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .profile-details span {
+    display: block; /* Ensure full width */
+    margin: 10px 0; /* Spacing for visual appeal */
+    color: inherit; /* Text color inherited from parent */
+    display: inline;
+  }
+
+  .profile-details input {
+    display: block; /* Ensure full width */
+    margin: 10px 0; /* Spacing for visual appeal */
+    color: black; /* Text color inherited from parent */
+    display: inline;
+  }
+  
+  .profile-details button {
+    background-color: #555; /* Button background */
+    color: #f8f8f8; /* Button text color */
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  
+  .profile-details button:hover {
+    background-color: #666; /* Slightly lighter on hover for feedback */
+  }
+  
+  
+  /* Styles for orders section */
+  .orders-container {
+    background-color: #424242; /* Slightly lighter than the container for contrast */
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .orders-container h3 {
+    color: #f8f8f8;
+    margin-bottom: 15px;
+  }
+  
+  .orders-container ul {
+    list-style-type: none; /* Removing bullets from list */
+    padding: 0;
+  }
+  
+  .orders-container li {
+    background-color: #333; /* Dark background for each list item */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .orders-container li strong {
+    color: #f8f8f8;
+  }
+  
+  /* Responsive design: Adjust the max-width or use media queries as needed */
+  @media (max-width: 768px) {
+    .profile-container, .orders-container {
+      margin: 20px;
+    }
+    
+    .profile-field {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    
+      .profile-details span, .profile-details input, .profile-details textarea,
+      .profile-details button.edit-button {
+        /* Let them take full width on smaller screens */
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    
+      .profile-details button.edit-button {
+        margin-top: 10px; /* Add space between the input and the button on small screens */
+      }
+  }
+  

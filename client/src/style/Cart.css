@@ -1,0 +1,213 @@
+.cart-container span {
+  color: #333; /* Or any other color that contrasts well with the background */
+}
+
+.cart-container {
+    width: 100%;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Adjust max-width as per your design requirements */
+    margin: auto;
+  }
+  
+  .cart-container h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .item-info {
+    flex-grow: 1;
+  }
+  
+  .item-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+  
+  .item-price {
+    color: #666;
+  }
+
+  .cart-quantity-adjuster {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .cart-quantity-change {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+  }
+  
+  .cart-quantity-input {
+    border: none;
+    text-align: center;
+    width: 3rem;
+    padding: 0;
+  }
+
+  .quantity-input:focus {
+    outline: none;
+  }
+
+  .cart-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns the subtotal and checkout button to the start */
+  }
+  
+  .cart-subtotal {
+    margin-top: 20px;
+  }
+  
+  .checkout-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* A green color for the checkout button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #45a049; /* A darker green color on hover */
+  }
+  
+  
+ .remove-btn {
+  background-color: transparent;
+  border: none;
+  color: #718192;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.cart-empty {
+text-align: center;
+color: #999;
+}
+  
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif; /* Specify a font-family, replace with your choice */
+}
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .modal-content button {
+    padding: 10px 20px;
+    margin: 0 10px; /* This adds space between your buttons */
+    border: 1px solid #ccc; /* Example border, adjust as needed */
+    border-radius: 5px; /* Rounded corners for smooth shape */
+    background-color: #f7f7f7; /* Light background for the buttons */
+    cursor: pointer;
+    font-family: 'Arial', sans-serif; /* Apply your font choice here as well */
+    font-size: 1rem; /* Set a font size that matches the modal's style */
+    transition: all 0.3s ease; /* Smooth transition for button background */
+  }
+
+  .modal-content button:hover {
+    background-color: #e0e0e0; /* Slightly darker background on hover */
+  }
+  
+  .modal-success {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 10px; /* Reduce padding on smaller screens */
+    max-width: 100%; /* Allow the cart container to be full width */
+    margin: 10px; /* Add some margin around the cart */
+    box-shadow: none; /* Optionally remove the shadow if it feels too heavy on small screens */
+  }
+
+  .cart-item {
+    flex-direction: column; /* Stack item info and quantity adjuster on top of each other */
+    align-items: flex-start; /* Align content to the start on small screens */
+    margin-bottom: 10px; /* Reduce space between cart items */
+  }
+
+  .item-info, .item-title, .item-price {
+    width: 100%; /* Full width for the item information on small screens */
+  }
+
+  .cart-quantity-adjuster {
+    margin-top: 10px; /* Add some space between item info and quantity adjuster */
+  }
+
+  .cart-summary {
+    align-items: center; /* Center the subtotal and checkout button on small screens */
+  }
+
+  .checkout-btn, .remove-btn {
+    width: 100%; /* Full-width buttons for easy tapping on mobile */
+    text-align: center; /* Center text inside the buttons */
+  }
+
+  .modal-content {
+    width: 90%; /* Allow some space around the modal content */
+    margin: 0 5%; /* Center the modal content with margin */
+  }
+}
+
+/* Additional styles for when the keyboard is visible on mobile devices */
+@media (max-width: 768px) and (orientation: portrait) {
+  .modal {
+    align-items: flex-start; /* Align the modal content to the top */
+    padding-top: 20vh; /* Add some padding at the top */
+  }
+}
+
+/* Landscape orientation adjustments if necessary */
+@media (max-width: 768px) and (orientation: landscape) {
+  .cart-container, .modal-content {
+    max-width: 80%; /* Slightly reduce max width for better appearance in landscape */
+  }
+}

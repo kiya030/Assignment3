@@ -1,0 +1,76 @@
+.login-page {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #2f3133; /* Local background */
+  color: white; /* Local text color */
+  font-family: 'Poppins', sans-serif; /* Specific font for LoginPage */
+}
+
+.login-page__title {
+  font-size: 2.5em;
+  color: #E0E0E0;
+  margin-bottom: 0.5em;
+}
+
+.login-page__description {
+  font-size: 1.2em;
+  color: #BDBDBD;
+  margin-bottom: 2em;
+}
+
+.login-page__button-container {
+  margin: 2em 0;
+}
+
+.login-page__button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1em;
+  color: white;
+  background-color: #673AB7;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-page__button--login:hover {
+  background-color: #5E35B1;
+}
+
+.login-page__button--create {
+  background-color: #9575CD;
+}
+
+.login-page__button--create:hover {
+  background-color: #7E57C2;
+}
+
+.login-page__footer {
+  font-size: 1em;
+  color: #9E9E9E;
+  margin-top: 3em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .login-page__button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    font-size: 0.9em;
+  }
+
+  .login-page__title {
+    font-size: 2em;
+  }
+
+  .login-page__description {
+    font-size: 1em;
+  }
+
+  .login-page {
+    padding: 20px 10px;
+  }
+}

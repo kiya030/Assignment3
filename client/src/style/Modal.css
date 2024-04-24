@@ -1,0 +1,124 @@
+/* Modal.css */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dimmed background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensures it's on top of other content */
+}
+
+.modal-prototype-content {
+  position: relative;
+  background: rgb(78, 77, 102);
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px; /* Limits the size of the modal */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds shadow for better focus */
+}
+
+.modal-prototype-content button {
+  font-size: 16px;
+  padding: 8px 16px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: red; /* Indicates interactiveness when hovered */
+}
+
+.save-changes-button {
+  display: block;
+  width: 50%; /* Width relative to the modal content */
+  margin: 20px auto 0; /* Centered horizontally at the bottom */
+  padding: 10px 0;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-changes-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.star {
+  cursor: pointer; /* Indicates that stars are interactive */
+  font-size: 24px;
+  color: #ffd700; /* Gold color for stars */
+}
+
+.star.empty {
+  color: #ccc; /* Lighter color for empty stars */
+}
+
+/* Base styles for .modal-backdrop, .modal-prototype-content, .modal-close-button, .star remain unchanged */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-prototype-content {
+    width: 90%; /* Increase width to take more space on smaller screens */
+    padding: 15px; /* Optionally reduce padding if it feels too tight */
+  }
+
+  .modal-prototype-content button,
+  .save-changes-button {
+    font-size: 14px; /* Reduce font size for smaller screens */
+    padding: 10px 15px; /* Adjust padding to better fit the text */
+  }
+
+  .save-changes-button {
+    width: 80%; /* Increase width for better tap targets on mobile */
+    margin: 15px auto 10px; /* Adjust margin for positioning */
+  }
+
+  .star {
+    font-size: 20px; /* Reduce the star size for smaller screens */
+  }
+
+  .modal-close-button {
+    font-size: 20px; /* Make the close button smaller on mobile */
+    top: 5px; /* Adjust position to align better */
+    right: 5px;
+  }
+}
+
+/* Additional style for very small screens */
+@media (max-width: 480px) {
+  .modal-prototype-content {
+    width: 95%; /* Make modal even wider on very small screens */
+  }
+
+  .modal-close-button {
+    font-size: 18px; /* Further reduce the size of close button */
+  }
+
+  .star {
+    font-size: 18px; /* Even smaller stars to fit the mobile interface */
+  }
+}
+
+/* Handling Landscape Orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .modal-prototype-content {
+    max-height: 90vh; /* Add a maximum height to ensure modal fits within viewport */
+    overflow-y: auto; /* Enable scrolling for the modal content if needed */
+  }
+}

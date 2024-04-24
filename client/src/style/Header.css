@@ -1,0 +1,89 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px; /* Increase padding to increase height */
+  background-color: #343a40; /* Dark background for the header */
+  color: white;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none; /* Removes underline */
+  color: #adb5bd; /* Light grey color for text, similar to other nav items */
+  margin-right: auto; /* Ensures the brand is on the left and other nav items on the right */
+  transition: color 0.3s ease;
+}
+
+.brand:hover,
+.brand.active {
+  color: white; /* White text for the active/hover state */
+}
+
+.navigation {
+  display: flex;
+  list-style: none; /* Removes bullet points from list items */
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #adb5bd; /* Light grey color for text */
+  margin-left: 10px; /* Spacing between navigation items */
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover,
+.navigation a.active {
+  color: white; /* White text for the active/hover state */
+  border-bottom: 3px solid rgb(202, 156, 202); /* Underline for the active tab */
+  padding-bottom: 7px; /* Adjust padding to compensate for the border width */
+}
+
+.loginButton {
+  background-color: #5ba4bc; /* Light blue background for the login button */
+  border: none;
+  font-weight: bold;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 10px; /* Add some spacing between the button and the navigation */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+  background-color: #317894; /* Slightly darker light blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack the brand and navigation vertically */
+    align-items: flex-start; /* Align items to the start of the flex container */
+    padding: 10px; /* Decrease padding on smaller screens */
+  }
+
+  .brand {
+    margin-bottom: 10px; /* Add some space between brand and navigation on small screens */
+    font-size: 20px; /* Slightly smaller font size for the brand on mobile */
+  }
+
+  .navigation {
+    flex-direction: column; /* Stack links vertically */
+    align-items: flex-start; /* Align navigation items to the start */
+    padding: 0; /* Remove padding from the navigation */
+  }
+
+  .navigation a {
+    margin-left: 0; /* Remove the horizontal spacing between navigation items */
+    margin-bottom: 10px; /* Add space between stacked items */
+    padding: 10px; /* Maintain padding around the text for a tappable area */
+  }
+
+  .loginButton {
+    padding: 10px; /* Maintain padding for the button */
+    margin-top: 10px; /* Add space between the navigation and the button */
+    width: 100%; /* Full-width button for easy tapping on mobile */
+  }
+}

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+.welcome-back-heading {
+  font-family: 'Libre Baskerville', serif;
+  margin-top: 20px; /* Space above the heading */
+  margin-bottom: 20px; /* Space below the heading */
+  font-size: 1.5rem; /* Larger font size for the heading */
+  color: #dde6e9; /* Color for the heading */
+  padding-left: 10px; /* Spacing from the left edge */
+  border-left: 4px solid #333; /* Decorative left border */
+}
+
+.recent-reviews-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem; /* Adjust size as needed */
+  font-weight: 700;
+  color: #FFFFFF; /* This is a light color suitable for dark backgrounds */
+  text-align: center;
+  margin-bottom: 0.5rem; /* Spacing between title and subtitle */
+}
+
+.no-reviews-message {
+  color: #dde6e9; /* Set the color that works with your dark background */
+  font-size: 1.5rem; /* Set an appropriate font size */
+  font-style: italic; /* Optional: if you want to italicize the text */
+  margin-top: 50px; /* Space above the message */
+  margin-bottom: 70px; /* Space below the message */
+  text-align: center; /* Center the text if that fits your design */
+}
+
+.reviews-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.heading-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem; /* Adjust size as needed */
+  font-weight: 700;
+  color: #FFFFFF; /* This is a light color suitable for dark backgrounds */
+  text-align: center;
+  margin-bottom: 0.5rem; /* Spacing between title and subtitle */
+}
+
+.heading-subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem; /* Adjust size as needed */
+  font-weight: 400;
+  color: #CCCCCC; /* A lighter shade for the subtitle */
+  text-align: center;
+  margin-top: 0; /* Remove default paragraph margin */
+}
+
+@media (max-width: 768px) {
+  .welcome-back-heading {
+    font-size: 1.2rem; /* Smaller font size on mobile */
+    padding-left: 5px; /* Less padding on the sides */
+    border-left: 2px solid #333; /* Thinner border for smaller screens */
+  }
+
+  .recent-reviews-heading,
+  .heading-title {
+    font-size: 1.8rem; /* Smaller font size on mobile */
+  }
+
+  .no-reviews-message,
+  .heading-subtitle {
+    font-size: 1rem; /* Smaller font size on mobile */
+  }
+
+  .reviews-container {
+    flex-direction: column; /* Stack reviews vertically on small screens */
+  }
+}
+
+  
